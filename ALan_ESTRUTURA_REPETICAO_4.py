@@ -1,21 +1,21 @@
-# Lê o nome de usuário
-nome = input ("Digite seu nome: ")
-print(f"Olá, {nome}!")
-# Cria uma lista para armazenar as notas 
-notas = []
+# Cria uma lista para armazenar os caracteres
+caracteres = []
 
-# lê 4 notas do usuário
-for i in range(4):
-    nota = float(input(f"Digite a {i + 1}a nota: "))
-    notas.append(nota)
-    
-#Calcula a média das notas
-media = sum(notas) / len(notas)
+# Lisa de vogais
+vogais = ['a', 'e', 'i', 'o', 'u']
 
-# Mostra as notas
-print ("\n notss digitadas: ")
-for i, nota in enumerate(notas, start=1 ):
-    print(f"Nota {1}: {nota} ")
+# Lê 10 caracteres do usuário
+for i in range(10):
+    letra = input(f"Digite o {i + 1}o caractere: ").lower()
     
-# Mostra a média
-print(f"\n Média das notas: {media: .2f} ")
+    caracteres.append(letra)
+    
+#Filtra as consoantes
+consoantes = [c for c in caracteres if c not in vogais]
+
+# Mostra as consoantes e a quantidade
+print ("\n Consoantes digitadas: ")
+for c in consoantes:
+    print(c)
+    
+print(f"\n Total de consoantes: {len(consoantes)}")  
