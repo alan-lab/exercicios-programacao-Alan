@@ -1,21 +1,21 @@
-# Cria uma lista para armazenar os caracteres
-caracteres = []
+# Lista para armazenar os 20 números
+numeros = []
 
-# Lisa de vogais
-vogais = ['a', 'e', 'i', 'o', 'u']
+# Lê 20 números inteiros do usuário
+for i in range(20):
+     num = int(input(f"Digite o {i + 1}o número inteiro: "))
+     numeros.append(num)
 
-# Lê 10 caracteres do usuário
-for i in range(10):
-    letra = input(f"Digite o {i + 1}o caractere: ").lower()
-    
-    caracteres.append(letra)
-    
-#Filtra as consoantes
-consoantes = [c for c in caracteres if c not in vogais]
+# Separa os números pares e ímpares
+pares = [n for n in numeros if n % 2 == 0]
+impares = [n for n in numeros if n % 2 !=0]
 
-# Mostra as consoantes e a quantidade
-print ("\n Consoantes digitadas: ")
-for c in consoantes:
-    print(c)
-    
-print(f"\n Total de consoantes: {len(consoantes)}")  
+# Imprime os três vetores
+print("\n Vetor original: ")
+print(numeros)
+
+print("\n Vetor pares: ")
+print(pares)
+
+print("\n Vetor impares: ")
+print(impares)
