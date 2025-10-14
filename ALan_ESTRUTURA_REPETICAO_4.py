@@ -1,21 +1,25 @@
-# Lista para armazenar os 20 números
+# Criação de uma lista para armazenar os 5 números inteiros
 numeros = []
 
-# Lê 20 números inteiros do usuário
-for i in range(20):
-     num = int(input(f"Digite o {i + 1}o número inteiro: "))
-     numeros.append(num)
+# Leitura dos 5 números inteiros
+for i in range(5):
+    while True:
+        try:
+            num = int(input(f"Digite o {i+1}º número inteiro: "))
+            numeros.append(num)
+            break
+        except ValueError:
+            print("Por favor, digite um número inteiro válido.")
 
-# Separa os números pares e ímpares
-pares = [n for n in numeros if n % 2 == 0]
-impares = [n for n in numeros if n % 2 !=0]
+# Calculando a soma e a multiplicação dos números
+soma = sum(numeros)
+multiplicacao = 1
+for num in numeros:
+    multiplicacao *= num
 
-# Imprime os três vetores
-print("\n Vetor original: ")
-print(numeros)
+# Exibindo o resultado
+print(f"\nNúmeros digitados: {numeros}")
+print(f"Soma dos números: {soma}")
+print(f"Multiplicação dos números: {multiplicacao}")
 
-print("\n Vetor pares: ")
-print(pares)
-
-print("\n Vetor impares: ")
-print(impares)
+# Aqui está a linha em branco após o código
